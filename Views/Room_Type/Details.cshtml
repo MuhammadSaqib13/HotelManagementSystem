@@ -1,0 +1,57 @@
+﻿@model Hotel_MS.Models.Room_Type
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .det {
+        position: relative;
+        left: 250px;
+        color: black;
+    }
+</style>
+<h2 class="det">Details</h2>
+
+<div class="det">
+    <h4>Room_Type</h4>
+    <br/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Max_Guest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Max_Guest)
+        </dd>
+
+    </dl>
+</div>
+<p class="det">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

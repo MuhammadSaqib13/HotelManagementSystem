@@ -1,0 +1,81 @@
+﻿@model Hotel_MS.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .det {
+        position: relative;
+        left: 250px;
+        color: black;
+    }
+</style>
+<h2 class="det">Details</h2>
+
+<div class="det">
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.First_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p class="det">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Customer_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

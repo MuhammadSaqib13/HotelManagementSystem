@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Hotel_MS.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-left: 250px;">Customers</h2>
+
+<p style="margin-left: 250px;">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<center>
+    <table style="width: 60%;" class="table table-striped table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.First_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Last_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CNIC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Customer_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Customer_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Customer_id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</center>
